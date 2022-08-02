@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
 
+  constructor() { }
   ngOnInit(): void {
   }
+  passdata = "";
+  setValue(data: any) {
+    this.passdata = data;
+    console.log(data);
+  }
+
+  userData = ""
+  parentcomponent(data: any) {
+    console.log(data);
+    this.userData = data;
+  }
+
 
 }
+

@@ -1,1 +1,8 @@
-<h1>User Data!</h1>
+<div>
+    <h1 class="margin-top">User Data!</h1>
+    <h3>{{userdata}} </h3>
+    <br>
+    <input type="text" name="txtUserdata" #txtUserdata>&nbsp;&nbsp;
+    <button (click)="sendData(txtUserdata.value)">send to admin</button>
+  
+</div>

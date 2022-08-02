@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-
+  @Output() parentcomponent:EventEmitter<any>=new EventEmitter();
+@Input() userdata:any;
   constructor() { }
 
   ngOnInit(): void {
   }
+  sendData(data:any) {
+
+    this.parentcomponent.emit(data);
+  }
+  
 
 }
+

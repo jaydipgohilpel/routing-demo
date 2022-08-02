@@ -1,1 +1,7 @@
-<h1>Admin Data!</h1>
+<div>
+    <h1 class="margin-top">Admin Data!</h1>
+    <h3>{{userData}} </h3>
+    <input type="text" name="txtUserdata" #txtUserdata>&nbsp;&nbsp;
+    <input type="button" (click)="setValue(txtUserdata.value)" value="send to admin">
+</div>
+<app-user [userdata]="passdata" (parentcomponent)="parentcomponent($event)"></app-user>
