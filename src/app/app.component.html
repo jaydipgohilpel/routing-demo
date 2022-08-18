@@ -12,29 +12,25 @@
   <span>
     <table>
       <tr>
-        <th>
-          <a routerLink="user"> User Data</a>
-        </th>
-        <th>
-          <a routerLink="admin">Admin Data</a>
-        </th>
-        <th>
-          <a routerLink="about">About</a>
-        </th>
+        <a href="admin">Contact Us</a>
         <th>
           <a routerLink="contact">Contact Us</a>
         </th>
         <th>
-          <a routerLink="home">Home</a>
+          <input type="text" name="txtUserdata" #txtUserdata>&nbsp;&nbsp;
+          <input type="button" (click)="setValue(txtUserdata.value)" value="send user">&nbsp; {{userData}}
         </th>
-        
+
+
     </table>
 
 
   </span>
-  
+
   <div class="main">
+    <app-user [userdata]="passdata" (parentcomponent)="parentcomponent($event)"></app-user>
     <router-outlet></router-outlet>
+   <app-pipepractice></app-pipepractice>
   </div>
 </body>
 

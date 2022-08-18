@@ -3,10 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-
 const routes: Routes = [
   {
-    path: 'user',
+    path : 'user',
     component: UserComponent
   },
   {
@@ -16,7 +15,8 @@ const routes: Routes = [
   {
     path:"**",
     component:PageNotFoundComponent
-  }
+  },
+  
 ];
 
 @NgModule({

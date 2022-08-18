@@ -1,0 +1,21 @@
+<!-- <input type="text" name="" #searchText (keypress)="search()" placeholder="Search"> -->
+
+<!-- <ul *ngFor="let e of main">
+  <li>{{e.name}} </li>
+</ul> -->
+
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <!-- <mat-label>Assignee</mat-label> -->
+        <input type="text" matInput [formControl]="myControl" />
+        <!-- [matAutocomplete]="auto" -->
+        <!-- <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option.name}}
+            </mat-option>
+        </mat-autocomplete> -->
+    </mat-form-field>
+    <ul *ngFor="let option of filteredOptions | async" >
+        <li>{{option.name}} </li>
+    </ul>
+</form>
